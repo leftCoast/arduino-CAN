@@ -435,7 +435,7 @@ void MCP2515Class::reset()
   digitalWrite(_csPin, HIGH);
   SPI.endTransaction();
 
-  delayMicroseconds(10);
+  delayMicroseconds(20);	// Bumped from 10 to 20. 10 didn't work, 20 does. -jim lee
 }
 
 void MCP2515Class::handleInterrupt()
